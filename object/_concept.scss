@@ -1,0 +1,116 @@
+.concept{
+    margin-top: 80px;
+    .concept-main{
+        padding-top: 30px;
+        padding-left: 10%;
+        font-family: 'Gowun Batang', serif;
+        font-size: 18px;
+    }
+    .concept-content{
+        display: flex;
+        justify-content: space-between;
+        //position: relative;
+    }
+    .concept-left{
+        //z-index: 1;
+        padding-left: 40px;
+        padding-right: 30px;
+        padding-bottom: 60px;
+        background-color: cl(light-blue);
+        width: 60%;
+        @include sp{
+            width: 100%;
+        }
+    }
+    .concept-title{
+        font-size: 32px;
+        padding-bottom: 20px;
+        text-align: center;
+        @include sp{
+            font-size: 26px;
+        }
+    }
+    .concept-description{
+        font-size: 20px;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .concept-right{
+        width: 40%;
+        @include sp{
+            display: none;
+        }
+    }
+    .concept-image{
+        margin-top: 50px;
+    }
+    .concept-button{
+        margin: 0 auto;
+        margin-top: 70px;
+        background-color: cl(bblue);
+        @include button;
+    }
+    .concept-a{
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        transition: all .2s;
+    }
+    .concept-a:hover{
+        background-color: cl(light-black);
+        color: cl(basecolor);
+        border-radius: 5px;
+    }
+    .concept-a span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: all .5s;
+        display: block;
+        white-space: nowrap;
+    }
+    .concept-a span:nth-child(2){
+        opacity: 0;
+    }
+    .concept-a:hover span:nth-child(1){
+        opacity: 0;
+    }
+    .concept-a:hover span:nth-child(2){
+        opacity: 1;
+    }
+
+
+
+
+
+    .five{
+        margin-top: 50px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    .five span{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transition: all .5s;
+        transform: translateX(-50%,0);
+        display: block;
+        opacity: 1;
+        white-space: nowrap;
+    }
+    .five span:nth-child(2){
+        opacity: 0;
+        transform: translate(-50%,100%);
+    }
+    .five:hover span:nth-child(1){
+        opacity: 0;
+        transform: translate(-50%,-100%);
+    }
+    .five:hover span:nth-child(2){
+        opacity: 1;
+        transform: translate(-50%,0);
+    }
+}

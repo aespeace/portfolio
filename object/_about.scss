@@ -1,0 +1,71 @@
+.about{
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    .about-main{
+        font-size: 32px;
+        @include sp{
+            font-size: 28px;
+        }
+    }
+    .about-dream{
+        font-size: 1.25rem;
+        margin-top: 20px;
+    }
+    .about-dream:before{
+        content:"";
+        display:inline-block;
+        width:1em;
+        height:1em;
+        background:url(../../image/9-3.png) no-repeat;
+        background-size:contain;
+    }
+    .about-work{
+        margin-top: 10px;
+        text-align: center;
+        padding: 10px;
+        margin-right: percentage($number: 200px/1280px);
+        margin-left: percentage($number: 200px/1280px);
+        background-color: cl(light-gray);
+        border-radius: 5px;
+        @include sp{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+    .about-mind{
+        text-align: center;
+        margin-top: 40px;
+    }
+    .about-mind-list{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        @include sp{
+            flex-direction: column;
+        }
+    }
+    .about-mind-item{
+        width: percentage($number: 0.95px/3px);
+        box-shadow: 0 0 16px #00000029;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        @include sp{
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    /*.about-mind-item:hover{
+        box-shadow: 0 0 32px #00000029;
+    }*/
+    .about-mind-title{
+        text-align: center;
+        padding-bottom: 18px;
+        font-size: 1.125rem;
+    }
+    .about-mind-description{
+        padding-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
