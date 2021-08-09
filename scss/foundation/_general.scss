@@ -1,0 +1,26 @@
+$colors:(
+    basecolor:#fff,//白
+    maincolor:cadetblue,
+    accentcolor:rgb(51, 61, 75),
+    light-blue:aliceblue,
+    bblue:cornflowerblue,
+    light-gray:#e6e5e4,
+    light-black:#333,
+    dark-blue:rgb(11, 90, 90),
+);
+
+@function cl($key) {
+    @return map-get($colors, $key);
+}
+
+@mixin button {
+    text-align: center;
+    border-radius: 5px;
+    width: 200px;
+}
+
+@mixin sp {
+    @media (max-width:850px) {
+        @content;
+    }
+}

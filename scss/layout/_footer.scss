@@ -1,0 +1,97 @@
+.footer{
+    margin-top: 100px;
+    padding-bottom: 70px;
+    background-color: cl(maincolor);
+    .footer-list{
+        display: flex;
+        justify-content: center;
+        margin-left: percentage($number: 100px/1280px);
+        margin-right: percentage($number: 100px/1280px);
+    }
+    .footer-item{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .footer-item a:hover{
+        opacity: 0.6;
+    }
+    .footer-contact-button{
+        margin-top: 40px;
+        background-color: cl(dark-blue);
+        height: 50px;
+        padding: 10px 0;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        position: relative;
+        transition: all .2s;
+        overflow: hidden;
+        @include button;
+        color: #fff;
+    }
+    .footer-contact-button:hover{
+        opacity: 0.8;
+    }
+    .footer-contact-button span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: all .5s;
+        display: block;
+        white-space: nowrap;
+    }
+    .footer-contact-button span:nth-child(2){
+        opacity: 0;
+    }
+    .footer-contact-button:hover span:nth-child(1){
+        opacity: 0;
+    }
+    .footer-contact-button:hover span:nth-child(2){
+        opacity: 1;
+    }
+
+
+    .footer-contact{
+        margin-left: 25%;
+        margin-top: 20px;
+        @include sp{
+            margin: 0 auto;
+        }
+    }
+    .footer-contact iframe{
+        @include sp{
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .footer-right{
+        margin-top: 60px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .footer-contact-button::before {
+        content: '';
+        /*絶対配置でキラッと光るの位置を決める*/
+        position: absolute;
+        top: 0;
+        left: -75%;
+        /*キラッと光る形状*/
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+        transform: skewX(-25deg);
+    }
+    
+    /*hoverした際の移動のアニメーション*/
+    .footer-contact-button:hover::before {
+        animation: shine 0.7s;
+    }
+    
+    @keyframes shine {
+        100% {
+            left: 125%;
+        }
+    }
+}
